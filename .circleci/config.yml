@@ -30,7 +30,7 @@ jobs:
           sudo pip install boto
       - ansible-playbook/playbook:
           playbook: ansible/ec2_deploy.yml
-          playbook-options: --user ubuntu --key-file ../test.pem --ssh-common-args 'StrictHostKeyChecking=no'
+          playbook-options: --user ubuntu --key-file ../test.pem
 workflows:
   version: 2.1
   build:
