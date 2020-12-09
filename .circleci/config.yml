@@ -16,30 +16,29 @@ jobs:
       - run: npm run test
       - run: npm build
       - persist_to_workspace:
-         root: .
-         paths:
-           - .
+          root: .
+          paths:
+            - .
   deploy:
     docker: *ansible
     steps:
       - attach_workspace:
-         at: .
-
+          at: .
       - ansible-playbook/install
       - run:
-        command: |
-            sudo pip install boto
+         command: |
+          sudo pip install boto
       - ansible-playbook/playbook:
-         playbook: ansible/ec2_deploy.yml
-         playbook-options: --user ubuntu --key-file ../test.pem
+          playbook: ansible/ec2_deploy.yml
+          playbook-options: --user ubuntu --key-file ../test.pem
 workflows:
   version: 2.1
   build:
     jobs:
       - build
       - deploy:
-         requires:
-           - build
-         filters:
-           branches:
-             only: main
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
