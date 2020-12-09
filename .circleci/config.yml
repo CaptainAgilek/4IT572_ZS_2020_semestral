@@ -24,6 +24,10 @@ jobs:
     steps:
       - attach_workspace:
          at: .
+      - run:
+         command: |
+            sudo apt-get pip
+            sudo pip install boto
       - ansible-playbook/install
       - ansible-playbook/playbook:
          playbook: ansible/ec2_deploy.yml
