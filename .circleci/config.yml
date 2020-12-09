@@ -21,6 +21,7 @@ jobs:
     steps:
       - attach_workspace:
          at: .
+      - ansible-playbook/install
       - ansible-playbook/playbook:
          playbook: ansible/ec2_deploy.yml
          playbook-options: --user ubuntu --key-file ../test.pem
