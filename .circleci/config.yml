@@ -3,7 +3,7 @@ vse:
     - image: 'circleci/node:8.11.3'
 ansible:
   docker: &ansible
-    - image: 'circleci/python'
+    - image: 'circleci/python:latest'
       environment:
           ANSIBLE_HOST_KEY_CHECKING: no
 version: 2.1
@@ -29,7 +29,7 @@ jobs:
       - ansible-playbook/install
       - run:
          command: |
-          sudo pip install boto3
+          sudo pip install boto
       - add_ssh_keys:
          fingerprints:
           - "f6:ad:b5:34:b7:b8:65:1c:40:02:14:ab:f5:f3:e5:0c"
