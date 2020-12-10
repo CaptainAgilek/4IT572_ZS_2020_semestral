@@ -5,7 +5,7 @@
   tasks:
     - name: Locate running EC2 instances
       vars:
-        ansible_python_interpreter: /usr/bin/python3    
+        ansible_python_interpreter: /usr/local/bin/python3   
       ec2_instance_facts:
         region: us-east-1
       register: ec2_info
