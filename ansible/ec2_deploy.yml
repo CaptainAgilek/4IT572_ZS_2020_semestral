@@ -8,9 +8,9 @@
         ansible_python_interpreter: /usr/local/bin/python3
       ec2_instance_info:
         region: us-east-1
-        aws_access_key: ASIAVSW6B75A5VKJOTPM
-        aws_secret_key: Qwe/AQPu4ORosUAVbOCRvGy8xczD+4G1RRPlZ78o
-        security_token: FwoGZXIvYXdzEPH//////////wEaDDgrS4r/YBhP8rxhciLJAWunUR0+YagHGXIg41Gyt4IR8WR6CehOXUuz7QaGwAIqr2NUYJ1ccpZ5ku5PuizgS3mdq0IrjfxvS6sNSHUufYvbSWqX5wmgSN3Pk/07WSo4TZrT5d2egvcpmpYBOmbUpvxJUkb9XlHkB0J2KW+F3feZHVCgGa6e8C0WCzQeEeAtCROdPZ24wKSGYcA0nBI2BCu44/xeYEDHlTrvcDNqJ+jkOgMN0bAL9HFCwiKKyzpXLInZoF1moZUHrCkZYxr1hZMXxwIO8E05Giji9Mj+BTItDsKtxT+E08fzntEbuTlcOpf/v2AgduuuuZmjwEzQsr3/987/REZYAVnCrZBn
+        aws_access_key: ASIAVSW6B75A6YTJQC5R
+        aws_secret_key: LNelyTfp/dYczEhLk7Z7J1dlWleVAtSOHVmU+MLK
+        security_token: FwoGZXIvYXdzEPT//////////wEaDBaJuvqRof2DzrBTACLJAZ5dd6+QA92Wqowh55U6NNgsX9GouzValpfZV5yH7nR2pd9By6EqzkpCdOKnoesK3CODWWMUf2Meoo9W3Ed4HZriK70bzlSZJxsElCdvYbNH/nony9cjHLZPNC0vcjD/wlAvN4ioGwnpnSYcXBGgvgiC7Xg6oTntuqx7jQV7itFBilAbXkuW2iAJtdV9DZLIVUDme9b2dCInTi8OeBG6YQzA5yAENogFsjk4tbluMPmZLEek9aWCgjFYn3fZl2aSW+l87wEnNQCfTCiV08n+BTItuB86zp4Ee7Y7E4MFVuVoYF+F8pYiGRJERjtbX/7NkMB3RSCvdgGHFcpMOZQw
       register: ec2_info
     #- name: Debug
     #  debug:
@@ -61,7 +61,7 @@
       become: yes
     - name: Get project files from docker
       git:
-        repo: https://github.com/CaptainAgilek/4IT572_ZS_2020_circleci.git
+        repo: https://github.com/CaptainAgilek/4IT572_ZS_2020_semestral.git
         dest: ./app
     - name: Build docker with eshop
       shell: cd app && docker build -t myeshop:latest .
