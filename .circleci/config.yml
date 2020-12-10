@@ -28,6 +28,9 @@ jobs:
       - run:
          command: |
           sudo pip install boto
+      - add_ssh_keys:
+         fingerprints:
+          - "f6:ad:b5:34:b7:b8:65:1c:40:02:14:ab:f5:f3:e5:0c"
       - ansible-playbook/playbook:
           playbook: ansible/ec2_deploy.yml
           playbook-options: --user ubuntu --key-file ../test.pem
