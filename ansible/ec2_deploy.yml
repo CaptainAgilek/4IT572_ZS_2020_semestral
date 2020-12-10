@@ -5,7 +5,7 @@
   tasks:
     - name: Locate running EC2 instances
         - ec2_instance_facts:
-           region: us-east-1
+            region: us-east-1
       register: ec2_info
     - name: Launch EC2 instance
       ec2:
