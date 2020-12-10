@@ -4,6 +4,8 @@ vse:
 ansible:
   docker: &ansible
     - image: 'circleci/python'
+      environment:
+          ANSIBLE_HOST_KEY_CHECKING: no
 version: 2.1
 orbs:
   ansible-playbook: orbss/ansible-playbook@0.0.5
@@ -33,7 +35,7 @@ jobs:
           - "f6:ad:b5:34:b7:b8:65:1c:40:02:14:ab:f5:f3:e5:0c"
       - ansible-playbook/playbook:
           playbook: ansible/ec2_deploy.yml
-          playbook-options: --user ubuntu --key-file ../test.pem
+          playbook-options: --user ubuntu 
 workflows:
   version: 2.1
   build:
