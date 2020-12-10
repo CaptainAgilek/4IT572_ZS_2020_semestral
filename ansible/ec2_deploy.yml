@@ -13,6 +13,8 @@
         security_token: FwoGZXIvYXdzEPH//////////wEaDDgrS4r/YBhP8rxhciLJAWunUR0+YagHGXIg41Gyt4IR8WR6CehOXUuz7QaGwAIqr2NUYJ1ccpZ5ku5PuizgS3mdq0IrjfxvS6sNSHUufYvbSWqX5wmgSN3Pk/07WSo4TZrT5d2egvcpmpYBOmbUpvxJUkb9XlHkB0J2KW+F3feZHVCgGa6e8C0WCzQeEeAtCROdPZ24wKSGYcA0nBI2BCu44/xeYEDHlTrvcDNqJ+jkOgMN0bAL9HFCwiKKyzpXLInZoF1moZUHrCkZYxr1hZMXxwIO8E05Giji9Mj+BTItDsKtxT+E08fzntEbuTlcOpf/v2AgduuuuZmjwEzQsr3/987/REZYAVnCrZBn
       register: ec2_info
     - name: Launch EC2 instance
+      vars:
+        ansible_python_interpreter: /usr/bin/python3
       ec2:
         instance_type: t2.small
         image: ami-085925f297f89fce1
