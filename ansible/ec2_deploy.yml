@@ -6,7 +6,7 @@
     - name: Locate running EC2 instances
       vars:
         ansible_python_interpreter: /usr/local/bin/python3
-      ec2_instance_facts:
+      ec2_instance_info:
         region: us-east-1
         aws_access_key: ASIAVSW6B75A5VKJOTPM
         aws_secret_key: Qwe/AQPu4ORosUAVbOCRvGy8xczD+4G1RRPlZ78o
