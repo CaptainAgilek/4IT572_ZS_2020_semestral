@@ -14,9 +14,9 @@
         wait: yes
         count: 1
         group: eshop
-        aws_access_key: ASIAVSW6B75A7W2YBWCY
-        aws_secret_key: kQR/bM8xTNqWWQqRhRAVcGPSMAjBslcx/oF7hMWi
-        security_token: FwoGZXIvYXdzEOD//////////wEaDMrO49SNiHOztGAgQiLJAWSCME7vdZkn2nMJAQERfaR3f25kYPOuHGqNzZlK4T/pzMenEuSGhbs7cMSSdzGdKirRzac476yWdDgTxlYXJ/GrMJ/ZnYKsr8PiWqmXSuZ9dcdQQbMfY0OrjrZjR+O9iePeAfWDWsPeGHtp5u7fcmB/ganu2NTvA2SudQs9d+EKbIil3sjLoCXPLJrzVZpEladYPhXL/5vaGiYvBo4GloxBklXWVx+6SC723Pe4jFdViUO1bUw4a/iiIwWAj5Fy7CaWvvXFtFQbISj4m8X+BTItaDTVFqaUxu8Qho38DEWlYi2TM5D1NhxM8x8LqJ+F83LPjLpQONPBoBX2lOiK
+        aws_access_key: ASIAVSW6B75AXGB43AFS
+        aws_secret_key: KO/6YCu5u84HDuYaXzQlOGSHGdC6+S4Wz1cx98si
+        security_token: FwoGZXIvYXdzEOz//////////wEaDNc4cg9xJkgc5DE5lSLJAbXiwpc62Ft2fAl6yZNvBkPq0c9yuzdNhujpegcavkuFK4eCB4WhuWQ1tYokXqeqa+Je6JkqTn5TneRD0fPTj2xr9lTludGMI5EwIaNhha34epwbgrHlcAk+aaVstYsk691moSAYqkt8D97Q3MR2GS7wb22H0TXSHk6R1BvMnKJla8oald5WwBIpY17QYcy4dn+99o5e0RFFZZbxXr9gqit+8p71hzvB8AG0FV1wLH3kc0zjiqEMNUZwTdtXVh5zL1OjmjmJ3kr2PCik88f+BTIt/7Ts5ORlimbLidf7vcJIS+eF5yWvjgws6brh5qXJPKvOB6Q819WxhvR8wqVM
       register: ec2
 
     - name: Add instance host to group
@@ -24,7 +24,7 @@
       with_items: '{{ec2.instances}}'
 
     - name: accept new ssh fingerprints
-      shell: ssh-keyscan -H {{ item.public_ip }} >> /home/circleci/.ssh/known_hosts          
+      shell: ssh-keyscan -H {{ item.public_ip }} >> /home/circleci/.ssh/known_hosts
       with_items: '{{ ec2.instances }}'
 
     - name: Wait for SSH connection
