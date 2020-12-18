@@ -26,8 +26,8 @@
         wait: yes
         count: 1
         group: eshop
-        aws_access_key: ASIAVSWwetf6B75A5VewfKJOTPM
-        aws_secret_key: Qwe/AQPuwerf4ORosUAVbOCRvGy8xczD+4weG1RRPlZ78o
+        aws_access_key: ASIAVSW6B75ATPJDCJCE
+        aws_secret_key: gt3KD9+s2BZwMrjwhmj+c1vQh1Ox18IhbU30QhjA
         security_token: FwoGZXIvYXdzEewfPH//////////wEaDDgrS4r/YBhP8rxhciLJAWunUR0+YagHGXIgwegtf41Gyt4IR8WR6CehOXUuz7QaGwAIqr2NUYJ1ccpZ5ku5PuizgS3mdq0IrjfxvS6sNSHUufYvbSWqX5wmgSN3Pk/07WSo4TZrT5d2egvcpmpYBOmbUpvxJUkb9XlHkB0J2KW+F3feZHVCgGa6e8C0WCzQeEeAtCROdPZ24wKSGYcA0nBI2BCu44/xeYEDHlTrvcDNqJ+jkOgMN0bAL9HFCwiKKyzpXLInZoF1moZUHrCkZYxr1hZMXxwIO8E05Giji9Mj+BTItDsKtxT+E08fzntEbuTlcOpf/v2AgduuuuZmjwEzQsr3/987/REZYAVnCrZBn
       register: ec2
 
@@ -87,9 +87,9 @@
        region: us-east-1
        state: 'absent'
        instance_ids: '{{ item.instance_id }}'
-       aws_access_key: ASIAVwefSW6B75A5VKJwgtOTPM
-       aws_secret_key: Qwe/AQPu4OweRosUAVbOCRvGy8xczD+4Gw1RRPlZ78o
-       security_token: FwoGZXIvYweXdzEPH//////////wEaDDgrS4r/YBhP8rxhciLJAWuwegnUR0+YagHGXIg41Gyt4IweR8WR6CehOXUuz7QaGwAIqr2NUYJ1ccpZ5ku5PuizgS3mdq0IrjfxvS6sNSHUufYvbSWqX5wmgSN3Pk/07WSo4TZrT5d2egvcpmpYBOmbUpvxJUkb9XlHkB0J2KW+F3feZHVCgGa6e8C0WCzQeEeAtCROdPZ24wKSGYcA0nBI2BCu44/xeYEDHlTrvcDNqJ+jkOgMN0bAL9HFCwiKKyzpXLInZoF1moZUHrCkZYxr1hZMXxwIO8E05Giji9Mj+BTItDsKtxT+E08fzntEbuTlcOpf/v2AgduuuuZmjwEzQsr3/987/REZYAVnCrZBn
+       aws_access_key: ASIAVSW6B75ATPJDCJCE
+       aws_secret_key: gt3KD9+s2BZwMrjwhmj+c1vQh1Ox18IhbU30QhjA
+       security_token: FwoGZXIvYXdzELP//////////wEaDLnTM+ETxb/q//lc/CLJAXTgsR+96PNyrSM2Pc7vzRFzEsWSsknj5WD4hgdFnOKH4iecKeJh0CAA286uqG3uhZtUGeifLgpMepdM4XE+i5DFb0ghkmS8EEcIR1aESjsjd0JS1/HED2XiFAJWIMpzcqh1VjH1iI9MMKtm6SX8EubbiaitwiJwVNsompnDFhxf3i6/BZi5/YbQrQ/8o9iawaH432qNU1em7qO38a4XKunMjyCm52BRt7w1z6MOo8r7LSfJd/+m9ZdepSOU1vgiZk3RpSptdzwNhCiOxPP+BTItuMjd52DyzJ0xRBjm93ONepDIUFQCHaU1QvqsLqrKRyRukRuIM0TRMEhOdS9C
      loop: "{{ ec2_info.instances }}"
      loop_control:
        label: "{{ item.instance_id }}"
