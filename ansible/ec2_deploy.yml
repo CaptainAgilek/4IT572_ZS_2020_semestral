@@ -8,9 +8,9 @@
         ansible_python_interpreter: /usr/local/bin/python3
       ec2_instance_info:
         region: us-east-1
-        aws_access_key: ASIAVSW6B75A6wegtYTJQCtdet5R
-        aws_secret_key: LNelyTfp/dYczEhLk7Zwegt7J1dlWleVAtSOergergrehHVmU+MLK
-        security_token: FwoGZXIvYXdzEPT//////////wEaDBaJuvqRof2DzrBTACerhgheLJAZ5dd6+QA92Wqotwh55U6NNgsX9GouzValpfZV5yH7nR2pd9By6EqzkpCdOKnoesK3CODWWMUf2Meoo9W3Ed4HZriK70bzlSZJxsElCdvYbNH/nony9cjHLZPNC0vcjD/wlAvN4ioGwnpnSYcXBGgvgiC7Xg6oTntuqx7jQV7itFBilAbXkuW2iAJtdV9DZLIVUDme9b2dCInTi8OeBG6YQzA5yAENogFsjk4tbluMPmZLEek9aWCgjFYn3fZl2aSW+l87wEnNQCfTCiV08n+BTItuB86zp4Ee7Y7E4MFVuVoYF+F8pYiGRJERjtbX/7NkMB3RSCvdgGHFcpMOZQw
+        aws_access_key: ASIAVSW6B75ATPJDCJCE
+        aws_secret_key: gt3KD9+s2BZwMrjwhmj+c1vQh1Ox18IhbU30QhjA
+        security_token: FwoGZXIvYXdzELP//////////wEaDLnTM+ETxb/q//lc/CLJAXTgsR+96PNyrSM2Pc7vzRFzEsWSsknj5WD4hgdFnOKH4iecKeJh0CAA286uqG3uhZtUGeifLgpMepdM4XE+i5DFb0ghkmS8EEcIR1aESjsjd0JS1/HED2XiFAJWIMpzcqh1VjH1iI9MMKtm6SX8EubbiaitwiJwVNsompnDFhxf3i6/BZi5/YbQrQ/8o9iawaH432qNU1em7qO38a4XKunMjyCm52BRt7w1z6MOo8r7LSfJd/+m9ZdepSOU1vgiZk3RpSptdzwNhCiOxPP+BTItuMjd52DyzJ0xRBjm93ONepDIUFQCHaU1QvqsLqrKRyRukRuIM0TRMEhOdS9C
       register: ec2_info
     #- name: Debug
     #  debug:
